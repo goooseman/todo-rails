@@ -1,0 +1,18 @@
+!!!
+%html{ lang: "#{locale}" }
+  %head
+    %meta{ content: 'text/html; charset=UTF-8',
+      'http-equiv' => 'Content-Type' }/
+    %meta{ content: 'IE=edge',
+      'http-equiv' => 'X-UA-Compatible' }/
+    %meta{ content: 'initial-scale=1, maximum-scale=1, user-scalable=no',
+      name: 'viewport' }/
+    %title ToDo
+    = stylesheet_link_tag 'todo_rails/application', media: 'all'
+    = csrf_meta_tags
+  %body{ 'ng-app' => 'todoRails',
+    layout: 'column', 'layout-align' => 'center center' }
+    %md-toolbar{ layout: 'row', 'layout-align' => 'center' }
+      %h2= @config['title']
+    = yield
+    = javascript_include_tag 'todo_rails/application'

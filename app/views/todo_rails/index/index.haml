@@ -1,0 +1,16 @@
+#mainBody{ flex: '', layout: 'row', 'ng-controller' => 'todoCtrl' }
+  %md-content.md-padding
+    %form{ 'ng-submit' => 'addTodo()' }
+      %div{ layout: '', 'layout-align-gt-sm' => 'center center' }
+        %md-input-container{ flex: '85' }
+          %label= @config['add_label']
+          %input{ 'ng-model' => 'todoText' }/
+        %md-input-container
+          %md-button.md-fab{ 'aria-label' => 'Add todo items', type: 'submit' }
+            +
+    %div
+      .listHeader{ flex: '', layout: '', 'layout-align' => 'end end' }= @config['remaining_label']
+      %ul
+        %li{ 'ng-repeat' => 'todo in todos' }
+          %md-checkbox{ 'aria-label' => 'Todo Checkbox',
+            'ng-init' => 'todo.completed=false', 'ng-model' => 'todo.completed' } {{todo.title}}
