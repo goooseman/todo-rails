@@ -27,9 +27,15 @@ Run
 ``` ruby
 mount TodoRails::Engine => "/todos", as: 'todo'
 ```
-to your ``` routes.rb ``` and open ``` http://localhost:3000/todos ```.
+to your ``` routes.rb ```.
 
-
+ Create ``` config/todo-rails.yml ``` with the following:
+``` ruby
+title: 'TODO'
+add_label: 'Add tasks'
+remaining_label: '{{remaining()}} of {{todos.length}} remaining'
+```
+and open ``` http://localhost:3000/todos ```.
 ## TODO:
 * Comments
 * Archieve items
