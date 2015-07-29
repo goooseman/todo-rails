@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = "Make a simple todo app on your web app with just two line of codes. It is really easy to share your tasks about your web app with other with this app."
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{app,config,db,lib,vendor}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.2.1"

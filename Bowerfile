@@ -2,6 +2,8 @@
 # Check out https://github.com/42dev/bower-rails#ruby-dsl-configuration for more options
 
 # asset 'bootstrap'
-asset 'angular'
+asset 'angular', '1.3.17'
 asset 'restangular'
 asset 'angular-material'
+asset 'angular-animate', '1.3.17'
+asset 'angular-aria', '1.3.17'

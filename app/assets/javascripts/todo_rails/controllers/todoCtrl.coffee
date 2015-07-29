@@ -8,6 +8,9 @@ angular.module('todoRails.controllers').controller 'todoCtrl', [
   ($scope, Restangular) ->
     todos = Restangular.all('tasks')
 
+    $scope.saveTodo = (todo) ->
+      todo.save()
+
     $scope.reload = ->
       $scope.todos = todos.getList().$object
 
@@ -15,9 +18,9 @@ angular.module('todoRails.controllers').controller 'todoCtrl', [
 
     $scope.addTodo = ->
       todo =
-        task:
-          title: $scope.todoText
-          completed: false
+
+        title: $scope.todoText
+        completed: false
       todos.post todo
       $scope.todoText = ''
       $scope.reload()

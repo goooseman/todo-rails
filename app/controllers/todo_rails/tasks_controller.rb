@@ -49,7 +49,7 @@ module TodoRails
 
       # Only allow a trusted parameter "white list" through.
       def task_params
-        params.require(:task).permit(:title, :completed, :row_order, :priority, :comment)
+        params.permit(:title, :completed, :row_order, :priority, :comment)
       end
   end
 end

@@ -12,5 +12,4 @@
       .listHeader{ flex: '', layout: '', 'layout-align' => 'end end' }= @config['remaining_label']
       %ul
         %li{ 'ng-repeat' => 'todo in todos' }
-          %md-checkbox{ 'aria-label' => 'Todo Checkbox',
-            'ng-init' => 'todo.completed=false', 'ng-model' => 'todo.completed' } {{todo.title}}
+          %md-checkbox{ 'aria-label' => 'Todo Checkbox', 'ng-model' => 'todo.completed', 'ng-change' => 'saveTodo(todo)' } {{todo.title}}
