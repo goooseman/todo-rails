@@ -4,210 +4,174 @@
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700&subset=latin,cyrillic);
 
-
 html,
-body
-{
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-ul
-{
-    list-style: none;
+
+ul {
+  list-style: none;
 }
 
 /* Toolbar area */
 
-.menu
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 36px;
-    height: 38px;
-    margin: 16px;
-
-    border: none;
-    background-color: transparent;
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 38px;
+  margin: 16px;
+  border: none;
+  background-color: transparent;
 }
 
-md-toolbar h1
-{
-    position: relative;
-
-    margin: auto;
+md-toolbar h1 {
+  position: relative;
+  margin: auto;
 }
 
-@media (min-width: 800px)
-{
-    #mainBody
-    {
-        width: 800px;
-    }
+@media (min-width: 800px) {
+  #mainBody {
+    width: 800px;
+  }
 }
 
-@media (max-width: 799px)
-{
-    #mainBody
-    {
-        width: 100%;
-    }
-}
-#mainBody
-{
-    min-width: 340px;
-}
-
-
-md-content
-{
+@media (max-width: 799px) {
+  #mainBody {
     width: 100%;
+  }
 }
-.listHeader
-{
-    color: grey;
+
+#mainBody {
+  min-width: 340px;
 }
+
+md-content {
+  width: 100%;
+}
+
+.listHeader {
+  color: grey;
+}
+
 /* Sidenav area */
 
-md-list .md-button
-{
-    font-weight: 500;
-
-    width: 100%;
-
-    text-align: left;
-
-    color: inherit;
-}
-md-list .md-button.selected
-{
-    color: #03a9f4;
+md-list .md-button {
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+  color: inherit;
 }
 
-md-sidenav  md-list
-{
-    padding: 0 0 8px 0;
+md-list .md-button.selected {
+  color: #03a9f4;
 }
 
+md-sidenav md-list {
+  padding: 0 0 8px 0;
+}
 
 /* Primary content area */
 
-#content
-{
-    overflow: hidden;
+#content {
+  overflow: hidden;
 }
 
-#content
-{
-    padding-top: 5px;
-    padding-right: 40px;
-    padding-left: 40px;
+#content {
+  padding-top: 5px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
-#content .md-button.share
-{
-    position: absolute;
-    top: 10px;
-    right: 25px;
-
-    width: 48px;
-    height: 48px;
-    margin: 8px auto 16px 0;
-
-    border: none;
-    background-color: transparent;
+#content .md-button.share {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  width: 48px;
+  height: 48px;
+  margin: 8px auto 16px 0;
+  border: none;
+  background-color: transparent;
 }
 
-#content md-icon.avatar
-{
-    margin-top: 10px;
+#content md-icon.avatar {
+  margin-top: 10px;
 }
 
-#content .md-button.share > md-icon
-{
-    width: 36px;
-    height: 36px;
-
-    fill: black;
+#content .md-button.share > md-icon {
+  width: 36px;
+  height: 36px;
+  fill: black;
 }
 
-md-button.menuBtn > md-icon
-{
-    width: 24px;
-    height: 24px;
-
-    fill: white;
+md-button.menuBtn > md-icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
 }
 
-#content .md-button.share:active > md-icon
-{
-    padding: 4px;
-
-    transition: all 100ms ease-out 30ms;
-
-    border-radius: 75%;
-    background-color: #dadada;
+#content .md-button.share:active > md-icon {
+  padding: 4px;
+  transition: all 100ms ease-out 30ms;
+  border-radius: 75%;
+  background-color: #dadada;
 }
 
-#content img
-{
-    display: block;
-
-    max-width: 500px;
-    height: auto;
+#content img {
+  display: block;
+  max-width: 500px;
+  height: auto;
 }
 
 /* Utils */
 
-.content-wrapper
-{
-    position: relative;
+.content-wrapper {
+  position: relative;
 }
 
 /* Typography support coming in 0.8.0 */
 
-md-toolbar h1
-{
-    font-size: 1.250em;
-    font-weight: 400;
+md-toolbar h1 {
+  font-size: 1.250em;
+  font-weight: 400;
 }
 
-.avatar
-{
-    position: relative;
-
-    display: inline-block;
-    overflow: hidden;
-    zoom: .70;
-
-    width: 128px;
-    height: 128px;
-    margin: 0;
-
-    -webkit-transform: scale(.70);
-       -moz-transform: scale(.70);
-            transform: translateZ(0);
-    vertical-align: middle;
-
-    border: 1px solid #ddd;
-    border-radius: 50%;
+.avatar {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  zoom: .70;
+  width: 128px;
+  height: 128px;
+  margin: 0;
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  transform: translateZ(0);
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 50%;
 }
 
-
-md-bottom-sheet  md-icon
-{
-    margin-right: 20px;
+.done-true {
+  text-decoration: line-through;
+  color: #808080;
 }
 
-span.name
-{
-    font-size: 1.1em;
-    font-weight: bold;
+md-bottom-sheet md-icon {
+  margin-right: 20px;
+}
 
-    padding-left: 5px;
+span.name {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+md-list .md-button.text-center {
+  text-align: center;
 }

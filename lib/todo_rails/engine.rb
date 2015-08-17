@@ -2,7 +2,10 @@ module TodoRails
   class Engine < ::Rails::Engine
 
     require 'bower-rails'
-
+    require 'haml'
+    require 'haml-rails'
+    require 'sass-rails'
+    require 'coffee-rails'
 
     isolate_namespace TodoRails
 

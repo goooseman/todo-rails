@@ -1,0 +1,3 @@
+title: 'TODO'
+add_label: 'Add tasks'
+remaining_label: '{{remaining()}} of {{count()}} remaining'

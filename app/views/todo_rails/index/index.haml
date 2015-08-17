@@ -10,6 +10,10 @@
             +
     %div
       .listHeader{ flex: '', layout: '', 'layout-align' => 'end end' }= @config['remaining_label']
-      %ul
-        %li{ 'ng-repeat' => 'todo in todos' }
-          %md-checkbox{ 'aria-label' => 'Todo Checkbox', 'ng-model' => 'todo.completed', 'ng-change' => 'saveTodo(todo)' } {{todo.title}}
+      %md-list
+        %md-list-item{ 'ng-repeat' => 'todo in todos | filter:{"archieved":  false}:true' }
+          %md-checkbox{ 'aria-label' => 'Todo Checkbox', 'ng-model' => 'todo.completed', 'ng-change' => 'saveTodo(todo)'}
+          %p{class: "done-{{todo.completed}}"} {{todo.title}}
+          .md-secondary
+            %md-button.md-raised.md-warn.text-center{'ng-click' => 'deleteItem(todo, $event)'} x
+          %md-divider{ 'ng-if' => '!$last' }

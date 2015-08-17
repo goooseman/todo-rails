@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150729111534) do
+ActiveRecord::Schema.define(version: 20150729191440) do
 
   create_table "todo_rails_tasks", force: :cascade do |t|
     t.string   "title"
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(version: 20150729111534) do
     t.integer  "row_order"
     t.integer  "priority"
     t.text     "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "archieved",  default: false, null: false
   end
 
 end

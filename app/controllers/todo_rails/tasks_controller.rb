@@ -29,7 +29,7 @@ module TodoRails
     # PATCH/PUT /tasks/1
     def update
       if @task.update(task_params)
-        head :no_content
+        render json: @task
       else
         render json: @task.errors, status: :unprocessable_entity
       end
@@ -49,7 +49,7 @@ module TodoRails
 
       # Only allow a trusted parameter "white list" through.
       def task_params
-        params.permit(:title, :completed, :row_order, :priority, :comment)
+        params.permit(:title, :completed, :row_order, :priority, :comment, :archieved)
       end
   end
 end
